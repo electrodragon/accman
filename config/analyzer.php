@@ -98,7 +98,7 @@
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
       <div class="inner">
-        <h3 class="masthead-brand">ACC-MAN</h3>
+        <h3 class="masthead-brand">AccMan</h3>
         <nav class="nav nav-masthead justify-content-center">
           <a class="nav-link active" href="#">Config</a>
         </nav>
@@ -228,7 +228,7 @@ if ($databaseConnection === "OK") {
 
     <footer class="mastfoot mt-auto">
       <div class="inner">
-        <p>Accounts Manager :) <a href="https://github.com/electrodragon/accman.git">ACC-MAN</a>, by <a href="https://github.com/electrodragon">@electrodragon</a>.</p>
+        <p>Accounts Manager <a href="https://github.com/electrodragon/accman.git">AccMan</a>, by <a href="https://github.com/electrodragon">@electrodragon</a>.</p>
       </div>
     </footer>
   </div>
