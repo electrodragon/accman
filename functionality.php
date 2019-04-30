@@ -57,6 +57,15 @@ function navbar($page)
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                +
+                </a>
+                <div class="dropdown-menu bg-danger" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="new.php?new=acc">New Account</a>
+                  <a class="dropdown-item" href="new.php?new=snap">New Snap</a>
+                </div>
+              </li>
                 <li class="nav-item">
                   <a href="accman.php" class="nav-link'.$_1.'">Home</a>
                 </li>
