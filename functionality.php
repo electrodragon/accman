@@ -93,3 +93,8 @@ function htmlfoot()
         </html>
         ';
 }
+
+function newAccAddForm() {
+
+}
+?>
