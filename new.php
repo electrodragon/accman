@@ -13,6 +13,7 @@ validity(); ?>
   <title>AccMan</title>
 </head>
 <script src="functionality.js"></script>
+
 <body>
 
   <?php navbar(''); ?>
@@ -34,14 +35,6 @@ validity(); ?>
             <span class="text-muted">$5</span>
           </li>
 
-          <li class="list-group-item d-flex justify-content-between bg-light">
-            <div class="text-success">
-              <h6 class="my-0">Promo code</h6>
-              <small>EXAMPLECODE</small>
-            </div>
-            <span class="text-success">-$5</span>
-          </li>
-
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
               <h6 class="my-0">Password</h6>
@@ -50,7 +43,11 @@ validity(); ?>
                 <a href="#" onclick="set_pswd();">Set</a>
               </small>
             </div>
-            <span class="text-success" id="generated-password"><script>gen_pswd();</script></span>
+            <span class="text-success" id="generated-password">
+              <script>
+                gen_pswd();
+              </script>
+            </span>
           </li>
 
           <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -61,24 +58,32 @@ validity(); ?>
                 <a href="#">Set</a>
               </small>
             </div>
-            <span class="text-success" id="generated-dob"><script>gen_dob();</script></span>
+            <span class="text-success" id="generated-dob">
+              <script>
+                gen_dob();
+              </script>
+            </span>
           </li>
-
-          <li class="list-group-item d-flex justify-content-between">
-            <span>Total (USD)</span>
-            <strong>$20</strong>
-          </li>
-
         </ul>
 
-        <form class="card p-2">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Promo code">
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-secondary">Redeem</button>
+        <div class="card-deck mb-3 text-center">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Names</h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled mt-2 mb-4">
+                <li id="name-first"></li>
+                <li id="name-second"></li>
+                <li id="name-third"></li>
+                <li id="name-fourth"></li>
+                <li id="name-fifth"></li>
+              </ul>
+              <script>gen_names();</script>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="gen_names();">Re-Generate</button>
             </div>
           </div>
-        </form>
+        </div>
       </div>
 
       <div class="col-md-8 order-md-1">

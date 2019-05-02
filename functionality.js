@@ -53,3 +53,20 @@ surnames = [
   'Najafi', 'Osmani', 'Sadat', 'Saeed', 'Saifi', 'Sajjadi', 'Salehi', 'Sayyid', 'Shaikh', 'Taqvi',
   'Tirmizi', 'Turabi', 'Usmani', 'Wasti', 'Zubairi', 'Zaidi'
 ];
+
+function gen_names() {
+  let name = null;
+  let surname = null;
+  const fetchedNames = [];
+  for (var i = 0; i < 5; i++) {
+    name = names[getRandomInt(0,names.length)];
+    surname = surnames[getRandomInt(0,surnames.length)];
+    name += ' '+surname;
+    fetchedNames.push(name);
+  }
+  document.getElementById("name-first").innerHTML = fetchedNames[0];
+  document.getElementById("name-second").innerHTML = fetchedNames[1];
+  document.getElementById("name-third").innerHTML = fetchedNames[2];
+  document.getElementById("name-fourth").innerHTML = fetchedNames[3];
+  document.getElementById("name-fifth").innerHTML = fetchedNames[4];
+}
