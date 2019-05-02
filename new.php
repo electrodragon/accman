@@ -25,12 +25,15 @@ validity(); ?>
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-danger">Generator</span>
         </h4>
-        <ul class="list-group mb-3">
+        <ul class="list-group mb-2">
 
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
-              <h6 class="my-0">Third item</h6>
-              <small class="text-muted">Brief description</small>
+              <h6 class="my-0">Username</h6>
+              <small class="text-danger">
+                <a href="#" onclick="">Re-Gen</a> |
+                <a href="#" onclick="">Set</a>
+              </small>
             </div>
             <span class="text-muted">$5</span>
           </li>
@@ -38,7 +41,7 @@ validity(); ?>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
               <h6 class="my-0">Password</h6>
-              <small class="text-success">
+              <small class="text-danger">
                 <a href="#" onclick="gen_pswd();">Re-Gen</a> |
                 <a href="#" onclick="set_pswd();">Set</a>
               </small>
@@ -53,7 +56,7 @@ validity(); ?>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
               <h6 class="my-0">Date of Birth</h6>
-              <small class="text-muted">
+              <small class="text-danger">
                 <a href="#" onclick="gen_dob();">Re-Gen</a> |
                 <a href="#">Set</a>
               </small>
@@ -72,14 +75,44 @@ validity(); ?>
               <h4 class="my-0 font-weight-normal">Names</h4>
             </div>
             <div class="card-body">
-              <ul class="list-unstyled mt-2 mb-4">
+              <ul class="list-unstyled mt-0 mb-2">
                 <li id="name-first"></li>
                 <li id="name-second"></li>
                 <li id="name-third"></li>
                 <li id="name-fourth"></li>
-                <li id="name-fifth"></li>
+                <li class="mb-1" id="name-fifth"></li>
+                <li><small>
+                    <a href="#">a</a>
+                    <a href="#">b</a>
+                    <a href="#">c</a>
+                    <a href="#">d</a>
+                    <a href="#">e</a>
+                    <a href="#">f</a>
+                    <a href="#">g</a>
+                    <a href="#">h</a>
+                    <a href="#">i</a>
+                    <a href="#">j</a>
+                    <a href="#">k</a>
+                    <a href="#">l</a>
+                    <a href="#">m</a>
+                    <a href="#">n</a>
+                    <a href="#">o</a>
+                    <a href="#">p</a>
+                    <a href="#">q</a>
+                    <a href="#">r</a>
+                    <a href="#">s</a>
+                    <a href="#">t</a>
+                    <a href="#">u</a>
+                    <a href="#">v</a>
+                    <a href="#">w</a>
+                    <a href="#">x</a>
+                    <a href="#">y</a>
+                    <a href="#">z</a>
+                  </small></li>
               </ul>
-              <script>gen_names();</script>
+              <script>
+                gen_names();
+              </script>
               <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="gen_names();">Re-Generate</button>
             </div>
           </div>
