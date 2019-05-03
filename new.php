@@ -82,32 +82,32 @@ validity(); ?>
                 <li id="name-fourth"></li>
                 <li class="mb-1" id="name-fifth"></li>
                 <li><small>
-                    <a href="#">a</a>
-                    <a href="#">b</a>
-                    <a href="#">c</a>
-                    <a href="#">d</a>
-                    <a href="#">e</a>
-                    <a href="#">f</a>
-                    <a href="#">g</a>
-                    <a href="#">h</a>
-                    <a href="#">i</a>
-                    <a href="#">j</a>
-                    <a href="#">k</a>
-                    <a href="#">l</a>
-                    <a href="#">m</a>
-                    <a href="#">n</a>
-                    <a href="#">o</a>
-                    <a href="#">p</a>
-                    <a href="#">q</a>
-                    <a href="#">r</a>
-                    <a href="#">s</a>
-                    <a href="#">t</a>
-                    <a href="#">u</a>
-                    <a href="#">v</a>
-                    <a href="#">w</a>
-                    <a href="#">x</a>
-                    <a href="#">y</a>
-                    <a href="#">z</a>
+                    <a href="#" onclick="gen_aName();">a</a>
+                    <a href="#" onclick="gen_bName();">b</a>
+                    <a href="#" onclick="gen_cName();">c</a>
+                    <a href="#" onclick="gen_dName();">d</a>
+                    <a href="#" onclick="gen_eName();">e</a>
+                    <a href="#" onclick="gen_fName();">f</a>
+                    <a href="#" onclick="gen_gName();">g</a>
+                    <a href="#" onclick="gen_hName();">h</a>
+                    <a href="#" onclick="gen_iName();">i</a>
+                    <a href="#" onclick="gen_jName();">j</a>
+                    <a href="#" onclick="gen_kName();">k</a>
+                    <a href="#" onclick="gen_lName();">l</a>
+                    <a href="#" onclick="gen_mName();">m</a>
+                    <a href="#" onclick="gen_nName();">n</a>
+                    <a href="#" onclick="gen_oName();">o</a>
+                    <a href="#" onclick="gen_pName();">p</a>
+                    <a href="#" onclick="gen_qName();">q</a>
+                    <a href="#" onclick="gen_rName();">r</a>
+                    <a href="#" onclick="gen_sName();">s</a>
+                    <a href="#" onclick="gen_tName();">t</a>
+                    <a href="#" onclick="gen_uName();">u</a>
+                    <a href="#" onclick="gen_vName();">v</a>
+                    <a href="#" onclick="gen_wName();">w</a>
+                    <a href="#" onclick="gen_xName();">x</a>
+                    <a href="#" onclick="gen_yName();">y</a>
+                    <a href="#" onclick="gen_zName();">z</a>
                   </small></li>
               </ul>
               <script>

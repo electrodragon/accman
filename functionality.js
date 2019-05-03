@@ -54,7 +54,8 @@ surnames = [
   'Tirmizi', 'Turabi', 'Usmani', 'Wasti', 'Zubairi', 'Zaidi'
 ];
 
-function gen_names() {
+function gen_names(arg='no') {
+  console.log(arg);
   let name = null;
   let surname = null;
   const fetchedNames = [];
@@ -70,3 +71,31 @@ function gen_names() {
   document.getElementById("name-fourth").innerHTML = fetchedNames[3];
   document.getElementById("name-fifth").innerHTML = fetchedNames[4];
 }
+
+
+function gen_aName() { gen_names('a'); }
+function gen_bName() { gen_names('b'); }
+function gen_cName() { gen_names('c'); }
+function gen_dName() { gen_names('d'); }
+function gen_eName() { gen_names('e'); }
+function gen_fName() { gen_names('f'); }
+function gen_gName() { gen_names('g'); }
+function gen_hName() { gen_names('h'); }
+function gen_iName() { gen_names('i'); }
+function gen_jName() { gen_names('j'); }
+function gen_kName() { gen_names('k'); }
+function gen_lName() { gen_names('l'); }
+function gen_mName() { gen_names('m'); }
+function gen_nName() { gen_names('n'); }
+function gen_oName() { gen_names('o'); }
+function gen_pName() { gen_names('p'); }
+function gen_qName() { gen_names('q'); }
+function gen_rName() { gen_names('r'); }
+function gen_sName() { gen_names('s'); }
+function gen_tName() { gen_names('t'); }
+function gen_uName() { gen_names('u'); }
+function gen_vName() { gen_names('v'); }
+function gen_wName() { gen_names('w'); }
+function gen_xName() { gen_names('x'); }
+function gen_yName() { gen_names('y'); }
+function gen_zName() { gen_names('z'); }
