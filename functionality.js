@@ -55,47 +55,65 @@ surnames = [
 ];
 
 function gen_names(arg='no') {
-  console.log(arg);
   let name = null;
   let surname = null;
+  let nameSlice = null;
   const fetchedNames = [];
-  for (var i = 0; i < 5; i++) {
-    name = names[getRandomInt(0,names.length)];
-    surname = surnames[getRandomInt(0,surnames.length)];
-    name += ' '+surname;
-    fetchedNames.push(name);
+  if(arg === "no"){
+    for (var i = 0; i < 5; i++) {
+      name = names[getRandomInt(0,names.length)];
+      surname = surnames[getRandomInt(0,surnames.length)];
+      name += ' '+surname;
+      fetchedNames.push(name);
+    }
+    document.getElementById("name-first").innerHTML = fetchedNames[0];
+    document.getElementById("name-second").innerHTML = fetchedNames[1];
+    document.getElementById("name-third").innerHTML = fetchedNames[2];
+    document.getElementById("name-fourth").innerHTML = fetchedNames[3];
+    document.getElementById("name-fifth").innerHTML = fetchedNames[4];
+  } else {
+    for (var i = 0; i < 5 ; ) {
+      name = names[getRandomInt(0,names.length)];
+      surname = surnames[getRandomInt(0,surnames.length)];
+      nameSlice = name.slice(0,1);
+      if (nameSlice === arg) {
+        name += ' '+surname;
+        fetchedNames.push(name);
+        i++;
+      }
+    }
+    document.getElementById("name-first").innerHTML = fetchedNames[0];
+    document.getElementById("name-second").innerHTML = fetchedNames[1];
+    document.getElementById("name-third").innerHTML = fetchedNames[2];
+    document.getElementById("name-fourth").innerHTML = fetchedNames[3];
+    document.getElementById("name-fifth").innerHTML = fetchedNames[4];
   }
-  document.getElementById("name-first").innerHTML = fetchedNames[0];
-  document.getElementById("name-second").innerHTML = fetchedNames[1];
-  document.getElementById("name-third").innerHTML = fetchedNames[2];
-  document.getElementById("name-fourth").innerHTML = fetchedNames[3];
-  document.getElementById("name-fifth").innerHTML = fetchedNames[4];
 }
 
 
-function gen_aName() { gen_names('a'); }
-function gen_bName() { gen_names('b'); }
-function gen_cName() { gen_names('c'); }
-function gen_dName() { gen_names('d'); }
-function gen_eName() { gen_names('e'); }
-function gen_fName() { gen_names('f'); }
-function gen_gName() { gen_names('g'); }
-function gen_hName() { gen_names('h'); }
-function gen_iName() { gen_names('i'); }
-function gen_jName() { gen_names('j'); }
-function gen_kName() { gen_names('k'); }
-function gen_lName() { gen_names('l'); }
-function gen_mName() { gen_names('m'); }
-function gen_nName() { gen_names('n'); }
-function gen_oName() { gen_names('o'); }
-function gen_pName() { gen_names('p'); }
-function gen_qName() { gen_names('q'); }
-function gen_rName() { gen_names('r'); }
-function gen_sName() { gen_names('s'); }
-function gen_tName() { gen_names('t'); }
-function gen_uName() { gen_names('u'); }
-function gen_vName() { gen_names('v'); }
-function gen_wName() { gen_names('w'); }
-function gen_xName() { gen_names('x'); }
-function gen_yName() { gen_names('y'); }
-function gen_zName() { gen_names('z'); }
+function gen_aName() { gen_names('A'); }
+function gen_bName() { gen_names('B'); }
+function gen_cName() { gen_names('C'); }
+function gen_dName() { gen_names('D'); }
+function gen_eName() { gen_names('E'); }
+function gen_fName() { gen_names('F'); }
+function gen_gName() { gen_names('G'); }
+function gen_hName() { gen_names('H'); }
+function gen_iName() { gen_names('I'); }
+function gen_jName() { gen_names('J'); }
+function gen_kName() { gen_names('K'); }
+function gen_lName() { gen_names('L'); }
+function gen_mName() { gen_names('M'); }
+function gen_nName() { gen_names('N'); }
+function gen_oName() { gen_names('O'); }
+function gen_pName() { gen_names('P'); }
+function gen_qName() { gen_names('Q'); }
+function gen_rName() { gen_names('R'); }
+function gen_sName() { gen_names('S'); }
+function gen_tName() { gen_names('T'); }
+function gen_uName() { gen_names('U'); }
+function gen_vName() { gen_names('V'); }
+function gen_wName() { gen_names('W'); }
+function gen_xName() { gen_names('X'); }
+function gen_yName() { gen_names('Y'); }
+function gen_zName() { gen_names('Z'); }
