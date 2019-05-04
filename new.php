@@ -24,6 +24,8 @@ validity(); ?>
       <div class="col-md-4 order-md-2 mb-4">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-danger">Generator</span>
+          <button type="button" id="generator-mode" onclick="generator_simple();"></button>
+          <script>generator_advanced();</script>
         </h4>
         <ul class="list-group mb-2">
 

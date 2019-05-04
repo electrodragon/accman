@@ -54,42 +54,33 @@ surnames = [
   'Tirmizi', 'Turabi', 'Usmani', 'Wasti', 'Zubairi', 'Zaidi'
 ];
 
-function gen_names(arg='no') {
-  let name = null;
-  let surname = null;
-  let nameSlice = null;
+function gen_names(arg = 'no') {
+  let name, surname;
   const fetchedNames = [];
-  if(arg === "no"){
+  if (arg === "no") {
     for (var i = 0; i < 5; i++) {
-      name = names[getRandomInt(0,names.length)];
-      surname = surnames[getRandomInt(0,surnames.length)];
-      name += ' '+surname;
+      name = names[getRandomInt(0, names.length)];
+      name += ' ' + surnames[getRandomInt(0, surnames.length)];
       fetchedNames.push(name);
     }
-    document.getElementById("name-first").innerHTML = fetchedNames[0];
-    document.getElementById("name-second").innerHTML = fetchedNames[1];
-    document.getElementById("name-third").innerHTML = fetchedNames[2];
-    document.getElementById("name-fourth").innerHTML = fetchedNames[3];
-    document.getElementById("name-fifth").innerHTML = fetchedNames[4];
   } else {
-    for (var i = 0; i < 5 ; ) {
-      name = names[getRandomInt(0,names.length)];
-      surname = surnames[getRandomInt(0,surnames.length)];
-      nameSlice = name.slice(0,1);
-      if (nameSlice === arg) {
-        name += ' '+surname;
+    for (var i = 0; i < 5;) {
+      name = names[getRandomInt(0, names.length)];
+      if (name.toUpperCase().slice(0,1) === arg) {
+        name += ' ' + surnames[getRandomInt(0, surnames.length)];
         fetchedNames.push(name);
         i++;
       }
     }
-    document.getElementById("name-first").innerHTML = fetchedNames[0];
-    document.getElementById("name-second").innerHTML = fetchedNames[1];
-    document.getElementById("name-third").innerHTML = fetchedNames[2];
-    document.getElementById("name-fourth").innerHTML = fetchedNames[3];
-    document.getElementById("name-fifth").innerHTML = fetchedNames[4];
   }
+  document.getElementById("name-first").innerHTML = fetchedNames[0];
+  document.getElementById("name-second").innerHTML = fetchedNames[1];
+  document.getElementById("name-third").innerHTML = fetchedNames[2];
+  document.getElementById("name-fourth").innerHTML = fetchedNames[3];
+  document.getElementById("name-fifth").innerHTML = fetchedNames[4];
 }
 
+function hello_name() { let a = this.innerText; console.log(a); }
 
 function gen_aName() { gen_names('A'); }
 function gen_bName() { gen_names('B'); }
@@ -117,3 +108,15 @@ function gen_wName() { gen_names('W'); }
 function gen_xName() { gen_names('X'); }
 function gen_yName() { gen_names('Y'); }
 function gen_zName() { gen_names('Z'); }
+
+function generator_simple() {
+  document.getElementById("generator-mode").setAttribute("onclick","generator_advanced();");
+  document.getElementById("generator-mode").setAttribute("class","btn btn-outline-warning btn-sm");
+  document.getElementById("generator-mode").innerHTML = "Advance";
+}
+
+function generator_advanced() {
+  document.getElementById("generator-mode").setAttribute("onclick","generator_simple();");
+  document.getElementById("generator-mode").setAttribute("class","btn btn-outline-success btn-sm");
+  document.getElementById("generator-mode").innerHTML = "Simple";
+}
