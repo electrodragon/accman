@@ -24,8 +24,6 @@ validity(); ?>
       <div class="col-md-4 order-md-2 mb-4">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-danger">Generator</span>
-          <button type="button" id="generator-mode" onclick="generator_simple();"></button>
-          <script>generator_advanced();</script>
         </h4>
         <ul class="list-group mb-2">
 
@@ -33,11 +31,16 @@ validity(); ?>
             <div>
               <h6 class="my-0">Username</h6>
               <small class="text-danger">
-                <a href="#" onclick="">Re-Gen</a> |
-                <a href="#" onclick="">Set</a>
+                <a href="#" onclick="gen_username();">Next</a> |
+                <a href="#" onclick="username_set();">Set</a> |
+                <a href="#" onclick="gen_usernameone();">1</a> |
+                <a href="#" onclick="gen_usernametwo();">2</a> |
+                <a href="#" onclick="gen_usernamethree();">3</a> |
+                <a href="#" onclick="gen_usernameraninted();">R</a>
               </small>
             </div>
-            <span class="text-muted">$5</span>
+            <span class="text-success" id="username-viewer"></span>
+            <script>gen_username();</script>
           </li>
 
           <li class="list-group-item d-flex justify-content-between lh-condensed">
