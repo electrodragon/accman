@@ -62,7 +62,7 @@ const usernamesThreeCommon = [123,666,777,'007',111,200,100,321,101,999,555,333,
 const usernamesTwoCommon = [12,11,69,'01','00',22,13,99,10,23,21,77,88,33,19];
 
 function gen_username(arg="no") {
-  username = usernames[getRandomInt(0,usernames.length)];
+  username = usernames[getRandomInt(0,usernames.length - 1)];
   if (arg !== "no") {
     username += arg;
   }
@@ -89,13 +89,13 @@ function gen_names(arg = 'no') {
   const fetchedNames = [];
   if (arg === "no") {
     for (var i = 0; i < 5; i++) {
-      name = names[getRandomInt(0, names.length)];
+      name = names[getRandomInt(0, names.length - 1)];
       name += ' ' + surnames[getRandomInt(0, surnames.length)];
       fetchedNames.push(name);
     }
   } else {
     for (var i = 0; i < 5;) {
-      name = names[getRandomInt(0, names.length)];
+      name = names[getRandomInt(0, names.length - 1)];
       if (name.toUpperCase().slice(0,1) === arg) {
         name += ' ' + surnames[getRandomInt(0, surnames.length)];
         fetchedNames.push(name);
