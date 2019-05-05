@@ -20,7 +20,7 @@ function gen_pswd() {
 
 function set_pswd() {
   pswd = document.getElementById('generated-password').innerHTML;
-  document.getElementById('password').setAttribute("value", pswd);
+  document.getElementById('password').value = pswd;
 }
 
 function gen_dob() {
