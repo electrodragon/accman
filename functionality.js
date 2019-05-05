@@ -87,14 +87,14 @@ function gen_names(arg = 'no') {
   if (arg === "no") {
     for (var i = 0; i < 5; i++) {
       name = names[getRandomInt(0, names.length - 1)];
-      name += ' ' + surnames[getRandomInt(0, surnames.length)];
+      name += ' ' + surnames[getRandomInt(0, surnames.length - 1)];
       fetchedNames.push(name);
     }
   } else {
     for (var i = 0; i < 5;) {
       name = names[getRandomInt(0, names.length - 1)];
       if (name.toUpperCase().slice(0,1) === arg) {
-        name += ' ' + surnames[getRandomInt(0, surnames.length)];
+        name += ' ' + surnames[getRandomInt(0, surnames.length - 1)];
         fetchedNames.push(name);
         i++;
       }
@@ -133,3 +133,13 @@ function gen_wName() { gen_names('W'); }
 function gen_xName() { gen_names('X'); }
 function gen_yName() { gen_names('Y'); }
 function gen_zName() { gen_names('Z'); }
+
+function dategetter() {
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = mm + '/' + dd + '/' + yyyy;
+document.write(today);
+}
