@@ -1,6 +1,21 @@
-<?php session_start();
+<?php
+session_start();
 include("functionality.php");
-validity(); ?>
+validity();
+
+if (isset($_REQUEST['new'])) {
+    if ($_REQUEST['new'] === "acc") {
+        $new = $_REQUEST['new'];
+    } elseif ($_REQUEST['new'] === "snap") {
+        $new = $_REQUEST['new'];
+    } else {
+        header("location: index.php");
+    }
+} else {
+    header("location: index.php");
+}
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -11,8 +26,8 @@ validity(); ?>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <title>AccMan</title>
+  <script src="functionality.js"></script>
 </head>
-<script src="functionality.js"></script>
 
 <body>
 
@@ -27,28 +42,28 @@ validity(); ?>
         </h4>
         <ul class="list-group mb-2">
 
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <li class="list-group-item d-flex justify-content-between lh-condensed bg-dark">
             <div>
-              <h6 class="my-0">Username</h6>
+              <h6 class="my-0 text-light">Username</h6>
               <small class="text-danger">
-                <a href="#" onclick="gen_username();">Next</a> |
-                <a href="#" onclick="username_set();">Set</a> |
-                <a href="#" onclick="gen_usernameone();">1</a> |
-                <a href="#" onclick="gen_usernametwo();">2</a> |
-                <a href="#" onclick="gen_usernamethree();">3</a> |
-                <a href="#" onclick="gen_usernameraninted();">R</a>
+                <a class="text-light" href="#" onclick="gen_username();">Next</a> |
+                <a class="text-light" href="#" onclick="username_set();">Set</a> |
+                <a class="text-light" href="#" onclick="gen_usernameone();">1</a> |
+                <a class="text-light" href="#" onclick="gen_usernametwo();">2</a> |
+                <a class="text-light" href="#" onclick="gen_usernamethree();">3</a> |
+                <a class="text-light" href="#" onclick="gen_usernameraninted();">R</a>
               </small>
             </div>
             <span class="text-success" id="username-viewer"></span>
             <script>gen_username();</script>
           </li>
 
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <li class="list-group-item d-flex justify-content-between lh-condensed bg-dark">
             <div>
-              <h6 class="my-0">Password</h6>
+              <h6 class="my-0 text-light">Password</h6>
               <small class="text-danger">
-                <a href="#" onclick="gen_pswd();">Re-Gen</a> |
-                <a href="#" onclick="set_pswd();">Set</a>
+                <a class="text-light" href="#" onclick="gen_pswd();">Re-Gen</a> |
+                <a class="text-light" href="#" onclick="set_pswd();">Set</a>
               </small>
             </div>
             <span class="text-success" id="generated-password">
@@ -58,160 +73,79 @@ validity(); ?>
             </span>
           </li>
 
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <li class="list-group-item d-flex justify-content-between lh-condensed bg-dark">
             <div>
-              <h6 class="my-0">Date of Birth</h6>
+              <h6 class="my-0 text-light">Date of Birth</h6>
               <small class="text-danger">
-                <a href="#" onclick="gen_dob();">Re-Gen</a> |
-                <a href="#">Set</a>
+                <a class="text-light" href="#" onclick="gen_dob();">Re-Gen</a> |
+                <a class="text-light" href="#">Set</a>
               </small>
             </div>
             <span class="text-success" id="generated-dob">
-              <script>
-                gen_dob();
-              </script>
+              <script>gen_dob();</script>
             </span>
           </li>
         </ul>
 
         <div class="card-deck mb-3 text-center">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-header">
+          <div class="card mb-4 shadow-sm bg-dark">
+            <div class="card-header text-light">
               <h4 class="my-0 font-weight-normal">Names</h4>
             </div>
             <div class="card-body">
-              <ul class="list-unstyled mt-0 mb-2">
+              <ul class="list-unstyled mt-0 mb-2 text-success">
                 <li id="name-first"></li>
                 <li id="name-second"></li>
                 <li id="name-third"></li>
                 <li id="name-fourth"></li>
                 <li class="mb-1" id="name-fifth"></li>
                 <li><small>
-                    <a href="#" onclick="gen_aName();">a</a>
-                    <a href="#" onclick="gen_bName();">b</a>
-                    <a href="#" onclick="gen_cName();">c</a>
-                    <a href="#" onclick="gen_dName();">d</a>
-                    <a href="#" onclick="gen_eName();">e</a>
-                    <a href="#" onclick="gen_fName();">f</a>
-                    <a href="#" onclick="gen_gName();">g</a>
-                    <a href="#" onclick="gen_hName();">h</a>
-                    <a href="#" onclick="gen_iName();">i</a>
-                    <a href="#" onclick="gen_jName();">j</a>
-                    <a href="#" onclick="gen_kName();">k</a>
-                    <a href="#" onclick="gen_lName();">l</a>
-                    <a href="#" onclick="gen_mName();">m</a>
-                    <a href="#" onclick="gen_nName();">n</a>
-                    <a href="#" onclick="gen_oName();">o</a>
-                    <a href="#" onclick="gen_pName();">p</a>
-                    <a href="#" onclick="gen_qName();">q</a>
-                    <a href="#" onclick="gen_rName();">r</a>
-                    <a href="#" onclick="gen_sName();">s</a>
-                    <a href="#" onclick="gen_tName();">t</a>
-                    <a href="#" onclick="gen_uName();">u</a>
-                    <a href="#" onclick="gen_vName();">v</a>
-                    <a href="#" onclick="gen_wName();">w</a>
-                    <a href="#" onclick="gen_xName();">x</a>
-                    <a href="#" onclick="gen_yName();">y</a>
-                    <a href="#" onclick="gen_zName();">z</a>
+                    <a class="text-light" href="#" onclick="gen_aName();">a</a>
+                    <a class="text-light" href="#" onclick="gen_bName();">b</a>
+                    <a class="text-light" href="#" onclick="gen_cName();">c</a>
+                    <a class="text-light" href="#" onclick="gen_dName();">d</a>
+                    <a class="text-light" href="#" onclick="gen_eName();">e</a>
+                    <a class="text-light" href="#" onclick="gen_fName();">f</a>
+                    <a class="text-light" href="#" onclick="gen_gName();">g</a>
+                    <a class="text-light" href="#" onclick="gen_hName();">h</a>
+                    <a class="text-light" href="#" onclick="gen_iName();">i</a>
+                    <a class="text-light" href="#" onclick="gen_jName();">j</a>
+                    <a class="text-light" href="#" onclick="gen_kName();">k</a>
+                    <a class="text-light" href="#" onclick="gen_lName();">l</a>
+                    <a class="text-light" href="#" onclick="gen_mName();">m</a>
+                    <a class="text-light" href="#" onclick="gen_nName();">n</a>
+                    <a class="text-light" href="#" onclick="gen_oName();">o</a>
+                    <a class="text-light" href="#" onclick="gen_pName();">p</a>
+                    <a class="text-light" href="#" onclick="gen_qName();">q</a>
+                    <a class="text-light" href="#" onclick="gen_rName();">r</a>
+                    <a class="text-light" href="#" onclick="gen_sName();">s</a>
+                    <a class="text-light" href="#" onclick="gen_tName();">t</a>
+                    <a class="text-light" href="#" onclick="gen_uName();">u</a>
+                    <a class="text-light" href="#" onclick="gen_vName();">v</a>
+                    <a class="text-light" href="#" onclick="gen_wName();">w</a>
+                    <a class="text-light" href="#" onclick="gen_xName();">x</a>
+                    <a class="text-light" href="#" onclick="gen_yName();">y</a>
+                    <a class="text-light" href="#" onclick="gen_zName();">z</a>
                   </small></li>
               </ul>
               <script>
                 gen_names();
               </script>
-              <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="gen_names();">Re-Generate</button>
+              <button type="button" class="btn btn-lg btn-block btn-outline-warning" onclick="gen_names();">Re-Generate</button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-8 order-md-1">
-        <h4 class="mb-3 text-light">New Account</h4>
-        <form method="post" class="text-light" autocomplete="off">
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="firstName">First name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="">
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="lastName">Last name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="">
-            </div>
-          </div>
+    <div class="col-md-8 order-md-1">
+      <?php if ($new === "acc") {
+        newAccAddForm();
+      }elseif ($new === "snap") {
+        newSnapAddForm();
+      } ?>
 
-          <div class="mb-3">
-            <label for="username">Username</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text">@</span>
-              </div>
-              <input type="text" class="form-control" id="username" placeholder="Username">
-            </div>
-          </div>
 
-          <div class="mb-3">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="you@example.com">
-          </div>
-
-          <div class="mb-3">
-            <label for="password">Password</label>
-            <input type="text" class="form-control" id="password" placeholder="Password" value="">
-          </div>
-
-          <div class="mb-3">
-            <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-            <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-          </div>
-
-          <div class="row">
-            <div class="col-md-5 mb-3">
-              <label for="country">Country</label>
-              <select class="custom-select d-block w-100" id="country" required>
-                <option value="">Choose...</option>
-                <option>United States</option>
-              </select>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="state">State</label>
-              <select class="custom-select d-block w-100" id="state" required>
-                <option value="">Choose...</option>
-                <option>California</option>
-              </select>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="zip">Zip</label>
-              <input type="text" class="form-control" id="zip" placeholder="" required>
-            </div>
-          </div>
-
-          <hr class="mb-4">
-
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="cc-name">Name on card</label>
-              <input type="text" class="form-control" id="cc-name" placeholder="" required>
-              <small class="text-muted">Full name as displayed on card</small>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="cc-number">Credit card number</label>
-              <input type="text" class="form-control" id="cc-number" placeholder="" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 mb-3">
-              <label for="cc-expiration">Expiration</label>
-              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="cc-cvv">CVV</label>
-              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-            </div>
-          </div>
-          <hr class="mb-4">
-          <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
-        </form>
-      </div>
     </div>
-
   </div>
-  <?php htmlfoot(); ?>
+
+<?php htmlfoot(); ?>

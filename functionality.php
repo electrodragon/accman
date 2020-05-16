@@ -95,6 +95,110 @@ function htmlfoot()
 }
 
 function newAccAddForm() {
+  function generate_date_options() {
+    for ($i=1; $i < 32; $i++) {
+      echo '<option value="'.$i.'">'.$i.'</option>';
+    }
+  }
+  function generate_month_options() {
+    for ($i=0; $i < 12; $i++) {
+      $months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      echo '<option value="'.$months[$i].'">'.$months[$i].'</option>';
+    }
+  }
+  function generate_year_options() {
+    $year = date('Y');
+    for ($i=0; $i < 151; $i++) {
+      echo '<option value="'.$year.'">'.$year.'</option>';
+      $year--;
+    }
+  }
 
+echo '<h4 class="mb-3 text-success">New Account</h4>
+<form method="post" class="text-light" autocomplete="off">
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <input type="text" class="form-control bg-dark text-light" placeholder="First name" value="" name="firstname" id="firstname">
+    </div>
+    <div class="col-md-6 mb-3">
+      <input type="text" class="form-control bg-dark text-light" placeholder="Last name" value="" name="lastname" id="lastname">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <input type="text" class="form-control bg-dark text-light" placeholder="Username" value="" name="username" id="username">
+  </div>
+
+  <div class="mb-3">
+    <input type="email" class="form-control bg-dark text-light" placeholder="Email" value="" name="email" id="email">
+  </div>
+
+  <div class="mb-3">
+    <input type="text" class="form-control bg-dark text-light" placeholder="Password" value="" name="password" id="password">
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-2">
+      <input type="text" class="form-control bg-dark text-light" placeholder="Mini Note 1" id="note1">
+      <small class="text-info">Customer number if godaddy</small>
+    </div>
+    <div class="col-md-6 mb-2">
+      <input type="text" class="form-control bg-dark text-light" placeholder="Mini Note 2" id="note2">
+      <small class="text-info">Domain Name if godaddy</small>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-2">
+      <div class="form-inline">
+        <div class="form-group mr-2">
+          <select class="custom-select d-block w-100 bg-warning" id="bday">';
+          generate_date_options();
+          echo '</select>
+        </div>
+        <div class="form-group mr-2">
+          <select class="custom-select d-block w-100 bg-warning">';
+          generate_month_options();
+          echo '</select>
+        </div>
+        <div class="form-group">
+          <select class="custom-select d-block w-100 bg-warning">';
+          generate_year_options();
+          echo '</select>
+        </div>
+      </div>
+      <small class="text-info">Date of Birth</small>
+    </div>
+    <div class="col-md-6 mb-2">
+      <input type="text" class="form-control bg-dark text-light" id="phoneno" placeholder="+92 3450123456">
+      <small class="text-info">Phone Number</small>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-9 mb-4">
+      <label for="account">Account <span class="text-warning">(Required)</span></label>
+      <input type="text" class="form-control bg-dark text-light" placeholder="Facebook, Twitter, Reddit" required>
+    </div>
+    <div class="col-md-3 mb-4">
+      <label for="Gender">Gender</label>
+      <select class="custom-select d-block w-100 bg-warning">
+        <option value="">Choose...</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+  </div>
+
+  <button class="btn btn-primary btn-lg btn-block" type="submit">Continue</button>
+</form>';
+}
+
+function newSnapAddForm() {
+  
 }
 ?>
